@@ -49,6 +49,7 @@ const menu = [
 function getMenuItemName(menuItem) {
   return menuItem.name;
 }
+console.log("Q1 Answer");
 console.log(getMenuItemName(menu[0]));
 
 /**********
@@ -68,6 +69,7 @@ function isMenuItemInCategory(menuItem, category) {
     return false;
   }
 }
+console.log("Q2 Answer");
 console.log(isMenuItemInCategory(menu[1], "Salad"));
 
 /**********
@@ -137,7 +139,7 @@ const newMenuItem = {
   price: 14.99,
   ingredients: ["Dough", "Tomato Sauce", "Mozzarella", "Pepperoni"],
 };
-
+console.log("Q3 Answer");
 console.log(addMenuItem(menu, newMenuItem));
 
 /**********
@@ -157,6 +159,7 @@ function countMainCourseItems(menu) {
   });
   return menulength.length;
 }
+console.log("Q4 Answer");
 console.log(countMainCourseItems(menu));
 
 /**********
@@ -181,6 +184,7 @@ function listMenuItemNamesByCategory(menu, category) {
     return name.name;
   });
 }
+console.log("Q5 Answer");
 console.log(listMenuItemNamesByCategory(menu, "Main Course"));
 
 /**********/
@@ -212,6 +216,7 @@ function getCheapestMenuItem(menu) {
   });
   return smallestObject;
 }
+console.log("Q6 Answer");
 console.log(getCheapestMenuItem(menu));
 
 /**********
@@ -241,7 +246,7 @@ console.log(getCheapestMenuItem(menu));
   **********/
 
 function getMenuItemsByIngredient(menu, ingredient) {
-  let arrayWithParm = [];
+  const arrayWithParm = [];
   menu.forEach((ing) => {
     if (ing.ingredients.includes(ingredient)) {
       arrayWithParm.push(ing);
@@ -251,6 +256,7 @@ function getMenuItemsByIngredient(menu, ingredient) {
   });
   return arrayWithParm;
 }
+console.log("Q7 Answer");
 console.log(getMenuItemsByIngredient(menu, "Parmesan"));
 
 /**********
@@ -271,4 +277,5 @@ function removeMenuItemById(menu, menuItemId) {
   });
   return arrayAfterRemoval;
 }
+console.log("Q8 Answer");
 console.log(removeMenuItemById(menu, 302));
