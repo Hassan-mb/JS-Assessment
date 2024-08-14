@@ -215,6 +215,45 @@ function getCheapestMenuItem(menu) {
 console.log(getCheapestMenuItem(menu));
 
 /**********
+      Question 7: 🌶️🌶️🌶️
+      getMenuItemsByIngredient(menu, ingredient):
+      - receives an array of menu item objects
+      - receives an ingredient name (string)
+      - returns an array of menu item objects that contain the provided ingredient
+      ===
+      ANSWER: 
+      [
+        {
+          "id": 301,
+          "name": "Pasta",
+          "category": "Main Course",
+          "price": 12.99,
+          "ingredients": ["Penne", "Tomato Sauce", "Parmesan", "Basil"]
+        },
+        {
+          "id": 302,
+          "name": "Caesar Salad",
+          "category": "Salad",
+          "price": 8.99,
+          "ingredients": ["Lettuce", "Croutons", "Caesar Dressing", "Parmesan"]
+        }
+      ]
+  **********/
+
+function getMenuItemsByIngredient(menu, ingredient) {
+  let arrayWithParm = [];
+  menu.forEach((ing) => {
+    if (ing.ingredients.includes(ingredient)) {
+      arrayWithParm.push(ing);
+    } else {
+      return false;
+    }
+  });
+  return arrayWithParm;
+}
+console.log(getMenuItemsByIngredient(menu, "Parmesan"));
+
+/**********
       Question 8:
       You have a function removeMenuItemById(menu, menuItemId) that:
       - receives an array of menu objects
