@@ -186,6 +186,35 @@ console.log(listMenuItemNamesByCategory(menu, "Main Course"));
 /**********/
 
 /**********
+    Question 6: 🌶️🌶️
+    You have a function getCheapestMenuItem(menu) that:
+    - receives an array of menu item objects
+    - returns the menu item object with the lowest price
+    ===
+    ANSWER: 
+    {
+      "id": 304,
+      "name": "French Fries",
+      "category": "Side Dish",
+      "price": 4.99,
+      "ingredients": ["Potatoes", "Salt", "Oil"]
+    }
+**********/
+//start with index 0, go compare if its smaller save it, compare again and repeat, print the new array after
+function getCheapestMenuItem(menu) {
+  let smallestObject = menu[0];
+  menu.forEach((value) => {
+    if (value.price < smallestObject.price) {
+      smallestObject = value;
+    } else {
+      return false;
+    }
+  });
+  return smallestObject;
+}
+console.log(getCheapestMenuItem(menu));
+
+/**********
       Question 8:
       You have a function removeMenuItemById(menu, menuItemId) that:
       - receives an array of menu objects
